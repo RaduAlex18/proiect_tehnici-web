@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarii</title>
+    <link rel="stylesheet" type="text/css" href="form_afisare.css">
+</head>
+<body>
+  <h1 class="titlu">Formular de comentarii</h1>
+
+  <form id="messageForm">
+    <label for="name">Nume:</label>
+    <input type="text" id="name" required>
+
+    <label for="message">Mesaj:</label>
+    <textarea id="message" rows="3" cols="10" required></textarea>
+
+    <button id="b_submit" type="submit">Trimite</button>
+  </form>
+  
+  <button id="buton_stergere">Șterge comentariu</button>
+
+  <div id="container_mesaj"></div>
+
+  <script src="cod.js"></script>
+
+  <br>
+
+    <form id="myForm">
+        <div>
+            <input type="radio" name="color" id="aqua">
+            <label for="aqua">Aqua</label><br>
+            <input type="radio" name="color" id="purple">
+            <label for="purple">Purple</label><br>
+            <input type="radio" name="color" id="orange">
+            <label for="orange">Orange</label><br>
+            <input type="radio" name="color" id="brown">
+            <label for="brown">Brown</label><br>
+            <input type="radio" name="color" id="gold">
+            <label for="gold">Gold</label><br>
+        </div>
+    </form>
+
+    <script src="cod_2.js"></script>
+</body>
+</html>
