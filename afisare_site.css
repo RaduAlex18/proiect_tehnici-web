@@ -19,7 +19,7 @@ header h1{
 .container_imagine img{
     width: 100%;
     height: 100%;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .container_imagine:hover img{
@@ -99,6 +99,151 @@ header h1{
     display: block;
 }
 
-body main{
-    background-color: aqua;
+
+.item1 {
+    grid-area: masina1s;
+    background: lightblue;
+}
+  
+.item2 {
+    grid-area: masina2s;
+    background-color: lightgray;
+}
+  
+.item3 {
+    grid-area: masina3s;
+    background-color: lawngreen;
+}
+
+.item4 {
+    grid-area: masina1b;
+    background: lightsalmon;
+}
+  
+.item5 {
+    grid-area: masina2b;
+    background-color: lightcyan;
+}
+  
+.item6 {
+    grid-area: masina3b;
+    background-color: lightgreen;
+}
+
+.item7 {
+    grid-area: masina1i;
+    background: lemonchiffon;
+}
+  
+.item8 {
+    grid-area: masina2i;
+    background-color: lightsteelblue;
+}
+  
+.item9 {
+    grid-area: masina3i;
+    background-color: lightgreen;
+}
+  
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "masina1s masina2s masina3s"
+      "masina1b masina2b masina3b"
+      "masina1i masina2i masina3i";
+}
+
+@media (orientation: portrait){
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "masina1s"
+          "masina2s"
+          "masina3s"
+          "masina1b"
+          "masina2b"
+          "masina3b"
+          "masina1i"
+          "masina2i"
+          "masina3i";
+    }
+}
+
+@media screen and (max-width: 300px) {
+    body {
+      background-color: lightslategrey;
+    }
+}
+
+/*flex*/
+
+.text {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
+    border-color: azure;
+}
+  
+.text > p:first-child {
+    flex: 1;
+    padding: 20px;
+    background-color: gray;
+    color:tomato;
+}
+
+.text > p:last-child {
+    flex: 1;
+    padding: 20px;
+    background-color: lemonchiffon;
+    color: cadetblue;
+}
+
+
+/* animatii si tranzitii */
+
+@keyframes rotatie{
+    0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+}
+
+.rotatie:hover{
+    animation: rotatie 3s linear 0s infinite;
+}
+
+@keyframes slide{
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.marire{
+    animation: slide 10s;
+    font-size: 25px;
+    color: red;
+    transition-property: font-size;
+    transition-duration: 4s;
+}
+  
+.marire:hover{
+    font-size: 40px;
+    color: blue;
 }
