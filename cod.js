@@ -1,7 +1,9 @@
+let ar=[]
 document.getElementById('messageForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
     
     const nume = document.getElementById('name').value;
+    ar.push(nume);
 
     const namePattern = /^[a-zA-Z]+(?:\s+[a-zA-Z]+)+$/;
 
@@ -12,6 +14,7 @@ document.getElementById('messageForm').addEventListener('submit', function(event
   }
 
     const mesaj = document.getElementById('message').value;
+    ar.push(mesaj);
   
     const mesaj_nou = document.createElement('p');
 
@@ -23,7 +26,7 @@ document.getElementById('messageForm').addEventListener('submit', function(event
     const computedStyle = window.getComputedStyle(element);
     const textColor = computedStyle.color;
 
-    mesaj_nou.textContent = nume + ': ' + mesaj + '     ' + format_data;
+    mesaj_nou.textContent = ar[0].toUpperCase() + ': ' + ar[1] + '     ' + format_data;
 
     mesaj_nou.style.color=textColor;
 
